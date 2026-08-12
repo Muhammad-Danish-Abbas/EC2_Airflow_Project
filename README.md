@@ -27,6 +27,26 @@ flowchart LR
     style G fill:#e8f4fd,stroke:#0969da
     style H fill:#fbe9e7,stroke:#d32f2f
 ```
+---
+
+## 📸 Screenshots
+
+### Airflow DAG — successful end-to-end run (list view)
+![Airflow DAG List](screenshots/airflow-dag-list.png)
+
+### Airflow DAG — graph view (all 4 tasks green)
+![Airflow DAG Graph](screenshots/airflow-dag-graph.png)
+
+### Snowflake — Gold layer aggregation
+![Snowflake Gold Table](screenshots/snowflake-gold-table.png)
+
+### Power BI Dashboard
+![Power BI Dashboard](screenshots/powerbi-dashboard.png)
+
+### AWS EC2 — running instance
+![EC2 Instance](screenshots/ec2-instance.png)
+
+---
 
 **Bronze → Silver → Gold**, explained simply:
 - 🥉 **Bronze (Raw):** Data exactly as it arrived — untouched, messy, kept as the source of truth.
@@ -79,26 +99,6 @@ s3://<bucket>/bronze/year=YYYY/month=MM/day=DD/hour=HH/flights_<timestamp>.json
 5. **Visualize** — Power BI connects directly to the Snowflake Gold layer for live dashboards.
 6. **Monitor** — Any task failure across the DAG triggers a Slack notification via webhook, including the failed task name and a direct link to logs.
 
----
-
-## 📸 Screenshots
-
-### Airflow DAG — successful end-to-end run (list view)
-![Airflow DAG List](screenshots/airflow-dag-list.png)
-
-### Airflow DAG — graph view (all 4 tasks green)
-![Airflow DAG Graph](screenshots/airflow-dag-graph.png)
-
-### Snowflake — Gold layer aggregation
-![Snowflake Gold Table](screenshots/snowflake-gold-table.png)
-
-### Power BI Dashboard
-![Power BI Dashboard](screenshots/powerbi-dashboard.png)
-
-### AWS EC2 — running instance
-![EC2 Instance](screenshots/ec2-instance.png)
-
----
 
 ## 🚀 Setup
 
